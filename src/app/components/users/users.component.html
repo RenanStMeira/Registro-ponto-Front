@@ -1,2 +1,37 @@
-<p>users works!</p>
-<pre>{{usuarios$ | async | json}}</pre>
+<mat-card>
+    <mat-toolbar color="primary">Cadastrar</mat-toolbar>
+
+    <mat-card-content>
+        <form class="formulario" [formGroup]="form">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Nome" formControlName="nome">
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <input matInput placeholder="CPF" formControlName="cpf">
+              </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Senha" formControlName="senha">
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Cargo</mat-label>
+                <mat-select formControlName="cargo">
+                    <mat-option value="null"> </mat-option>
+                    <mat-option value="admin" >Supervisor</mat-option>
+                    <mat-option value="funcionario">Funcionario</mat-option>
+                  </mat-select>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary" class="margin-right" (click)="onSubmit()">Cadastrar</button>
+        <button mat-raised-button (click)="onCancel()">Cancelar</button>
+      </mat-card-actions>
+</mat-card>

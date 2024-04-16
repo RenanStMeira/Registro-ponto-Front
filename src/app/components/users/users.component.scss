@@ -1,0 +1,18 @@
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.margin-right {
+    margin-right: 20px;
+  }

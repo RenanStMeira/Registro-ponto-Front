@@ -13,15 +13,10 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  // list(): Observable<Usuario[]> {
-  //   return this.httpClient.get<{data: Usuario[]}>(this.API)
-  //   .pipe(map(response => response.data));
-  // }
-
   list(): Observable<Usuario[]> {
     return this.httpClient.get<Usuario[]>(this.API);
   }
-  
+
   createUser(user: Usuario) {
     return this.httpClient.post(this.API, user)
   }
