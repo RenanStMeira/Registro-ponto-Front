@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './components/users/users.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { RelatoriosComponent } from './pages/relatorios/relatorios.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: UsersComponent },
   { path: 'registro-de-horas', component: RegistroComponent },
+  { path: 'relatorio-de-horas', component: RelatoriosComponent },
   { path: '', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

@@ -1,0 +1,20 @@
+<div *ngIf="relatorios">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuário</th>
+          <th>Data</th>
+          <th>Minutos Trabalhados</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let relatorio of relatorios">
+          <td>{{ relatorio.id }}</td>
+          <td>{{ relatorio.usuario.nome }}</td>
+          <td>{{ relatorio.data }}</td>
+          <td>{{ relatorio.minutosTrabalhados }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

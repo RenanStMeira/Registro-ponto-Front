@@ -29,6 +29,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginService } from './service/login.service';
 import { RegistroDeHorasComponent } from './components/registro-de-horas/registro-de-horas.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { RelatoriosComponent } from './pages/relatorios/relatorios.component';
+import { RelatoriosHotasComponent } from './components/relatorios-hotas/relatorios-hotas.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { RegistroComponent } from './pages/registro/registro.component';
     HomeComponent,
     LoginComponent,
     RegistroDeHorasComponent,
-    RegistroComponent
+    RegistroComponent,
+    RelatoriosComponent,
+    RelatoriosHotasComponent
   ],
   imports: [
     BrowserModule,
