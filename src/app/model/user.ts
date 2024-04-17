@@ -28,3 +28,9 @@ export interface RelatorioDeHoras {
     data: string;
     minutosTrabalhados: string;
 }
+
+export interface Login {
+    email: string;
+    senha: string;
+  }
+  

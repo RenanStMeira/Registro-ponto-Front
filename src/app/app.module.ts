@@ -20,14 +20,23 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { LoginService } from './service/login.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    LoginComponent,
+    HeaderComponent,
+    LoginPageComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -46,12 +55,17 @@ import { LoginComponent } from './components/login/login.component';
     MatCardModule,
     MatSelectModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    FormsModule,
   ],
   providers: [
+    LoginService,
     ApiService,
     provideAnimationsAsync()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+  ]
 })
 export class AppModule { }
