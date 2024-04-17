@@ -27,6 +27,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { LoginService } from './service/login.service';
+import { RegistroDeHorasComponent } from './components/registro-de-horas/registro-de-horas.component';
+import { RegistroComponent } from './pages/registro/registro.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { LoginService } from './service/login.service';
     HeaderComponent,
     LoginPageComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroDeHorasComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
