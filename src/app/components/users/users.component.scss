@@ -1,18 +1,38 @@
-.formulario {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-mat-card-actions {
+.mat-card {
     display: flex;
     justify-content: center;
-    padding: 15px;
-}
+    align-items: center;
+  }
 
-.margin-right {
-    margin-right: 20px;
+  .mat-toolbar {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .formulario {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .margin-right {
+    margin-right: 10px;
+  }
+  
+  .mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .mat-toolbar {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
   }

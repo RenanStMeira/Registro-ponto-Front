@@ -4,6 +4,8 @@
     <p>Data e Hora de Entrada: {{registro.dataHoraEntrada}}</p>
     <p>Data e Hora de Saída: {{registro.dataHoraSaida}}</p>
   </div>
-  
-  <button (click)="iniciarRegistro()">Iniciar Registro</button>
-  <button (click)="finalizarRegistro()">Finalizar Registro</button>
+  <div class="conteiner-btn">
+    <button (click)="iniciarRegistro()" mat-raised-button color="primary" class="btn-register">Iniciar Registro</button>
+    <button (click)="finalizarRegistro()" mat-raised-button color="warn" class="btn-cancel">Finalizar Registro</button>
+  </div>
+ 

@@ -24,7 +24,8 @@ export interface RegistroDeHoras {
 
 export interface RelatorioDeHoras {
     id: number;
-    usuario: Usuario;
+    usuarioId: number;
+    nomeUsuario: string;
     data: string;
     minutosTrabalhados: string;
 }

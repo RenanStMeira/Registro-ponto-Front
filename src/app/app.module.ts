@@ -21,7 +21,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
@@ -31,6 +30,8 @@ import { RegistroDeHorasComponent } from './components/registro-de-horas/registr
 import { RegistroComponent } from './pages/registro/registro.component';
 import { RelatoriosComponent } from './pages/relatorios/relatorios.component';
 import { RelatoriosHotasComponent } from './components/relatorios-hotas/relatorios-hotas.component';
+import { FormatDurationPipe } from './format-duration.pipe';
+import { AccountComponent } from './pages/account/account.component';
 
 
 @NgModule({
@@ -38,13 +39,14 @@ import { RelatoriosHotasComponent } from './components/relatorios-hotas/relatori
     AppComponent,
     UsersComponent,
     HeaderComponent,
-    LoginPageComponent,
     HomeComponent,
     LoginComponent,
     RegistroDeHorasComponent,
     RegistroComponent,
     RelatoriosComponent,
-    RelatoriosHotasComponent
+    RelatoriosHotasComponent,
+    FormatDurationPipe,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
