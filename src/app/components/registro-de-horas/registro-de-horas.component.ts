@@ -1,25 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistroDeHoras } from '../../model/user';
 import { RegistroDeHorasService } from '../../service/registro.service';
+import { LoginService } from '../../service/login.service';
 
 @Component({
   selector: 'app-registro-de-horas',
   templateUrl: './registro-de-horas.component.html',
-  styleUrl: './registro-de-horas.component.scss'
+  styleUrls: ['./registro-de-horas.component.scss']
 })
 export class RegistroDeHorasComponent implements OnInit {
   registro!: RegistroDeHoras;
+  usuarioLogado: any;
 
-  constructor(private registroDeHorasService: RegistroDeHorasService) { }
+  constructor(
+    private registroDeHorasService: RegistroDeHorasService,
+    private loginService: LoginService
+  ) { }
 
   ngOnInit(): void {
+    this.loginService.getUsuarioLogado().subscribe(usuario => {
+      this.usuarioLogado = usuario;
+    });
   }
 
   iniciarRegistro(): void {
-    const usuarioId = 7;
-    this.registroDeHorasService.iniciarRegistro(usuarioId).subscribe(
+    if (!this.usuarioLogado || !this.usuarioLogado.id) {
+      alert('Nenhum usuário logado.');
+      return;
+    }
+
+    this.registroDeHorasService.iniciarRegistro(this.usuarioLogado.id).subscribe(
       registro => this.registro = registro,
-      error => console.error(error)
+      error => {
+        console.error(error);
+        alert('Erro ao iniciar registro. Por favor, tente novamente.');
+      }
     );
   }
 
@@ -27,7 +42,10 @@ export class RegistroDeHorasComponent implements OnInit {
     if (this.registro && this.registro.id) {
       this.registroDeHorasService.finalizarRegistro(this.registro.id).subscribe(
         registro => this.registro = registro,
-        error => console.error(error)
+        error => {
+          console.error(error);
+          alert('Erro ao finalizar registro. Por favor, tente novamente.');
+        }
       );
     }
   }
